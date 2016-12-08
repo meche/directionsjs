@@ -38,6 +38,13 @@ test('directions("L", ["West", "South"]) should return ["West", "South", "East"]
   expect(directions(action, lastState)).to.be.deep.equal(result)
 })
 
+test('directions("L", ["West", "North"]) should return ["West", "North", "West"]', () => {
+  const action = 'L'
+  const lastState = ['West', 'North']
+  const result = ['West', 'North', 'West']
+  expect(directions(action, lastState)).to.be.deep.equal(result)
+})
+
 test('directions("R", ["West"]) should return ["West", "North"]', () => {
   const action = 'R'
   const lastState = ['West']

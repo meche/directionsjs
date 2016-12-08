@@ -17,7 +17,7 @@ const turnRight = (lastState) => {
 const turnLeft = (lastState) => {
   let fix = 0
   fix = cardinalPoints.indexOf(lastState[0]) - 1
-  if (lastState === [] || fix === -2) {
+  if (lastState === [] || fix <= -1) {
     return cardinalPoints[3]
   }
   return cardinalPoints[fix]
